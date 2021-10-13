@@ -103,7 +103,7 @@ nav.side-bar .logo-area img {
     position: absolute;
     max-height: 100%;
     max-width: 75%;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.min {
@@ -114,7 +114,7 @@ aside.side-bar-wrap:hover nav.side-bar .logo-area img.min {
 nav.side-bar .logo-area img.max {
     max-width: 0;
     opacity: 0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.max {
@@ -185,7 +185,7 @@ nav.side-bar ul li a {
     gap: 0;
     align-items: center;
     text-decoration: none;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 aside:hover nav.side-bar ul li a {
@@ -194,7 +194,7 @@ aside:hover nav.side-bar ul li a {
 
 nav.side-bar ul li a span {
     display: flex;
-    transition: 0.75s cubic-bezier(0.39, 0.58, 0.57, 1);
+    transition: 0.25s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
 
 nav.side-bar ul li a span.icon {
