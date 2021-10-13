@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div class="navbar">
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+            <path fill="currentColor"
+                  d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                  transform="translate(-8 -8)"/>
+        </svg>
+    </button>
+</div>
 <aside class="side-bar-wrap">
     <nav class="side-bar">
         <div class="logo-area">
@@ -18,7 +27,7 @@
             <li class="active">
                 <a href="#">
                             <span class="icon">
-                                <img src="images/home.png">
+                                <img src="images/home.png" alt="">
                             </span>
                     <span class="title">Home</span>
                 </a>
@@ -26,7 +35,7 @@
             <li>
                 <a href="#" onclick="document.location='movies.html'">
                             <span class="icon">
-                                <img src="images/film.png">
+                                <img src="images/film.png" alt="">
                             </span>
                     <span class="title">Movies</span>
                 </a>
@@ -34,7 +43,7 @@
             <li>
                 <a href="#">
                             <span class="icon">
-                                <img src="images/TV.png">
+                                <img src="images/TV.png" alt="">
                             </span>
                     <span class="title">TV Series</span>
                 </a>
@@ -42,7 +51,7 @@
             <li>
                 <a href="#">
                             <span class="icon">
-                                <img src="images/cartoons.png">
+                                <img src="images/cartoons.png" alt="">
                             </span>
                     <span class="title">Cartoons</span>
                 </a>
@@ -50,7 +59,7 @@
             <li>
                 <a href="#">
                             <span class="icon">
-                                <img src="images/anime.png">
+                                <img src="images/anime.png" alt="">
                             </span>
                     <span class="title">Anime</span>
                 </a>
@@ -61,4 +70,5 @@
 </body>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <script src="assets/script.js"></script>
+<script src="assets/darkmode.js"></script>
 </html>

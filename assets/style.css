@@ -1,14 +1,42 @@
 :root {
     --white: #ffffff;
+    --background: #fbebff;
     --black: #000000;
     --color-primary: #583866;
     --color-secondary: #ba9ed2;
     --color-third: #2c1c33;
+    --gradient-dark: #262626;
 }
+
 body {
     margin: 10px;
-    background-color: var(--white);
-    font-family: sans-serif;
+    background-color: var(--background);
+    font-family: "Gill Sans", sans-serif;
+    --bar-color: var(--color-primary);
+    --theme-switch: var(--black);
+}
+
+.darkmode {
+    margin: 10px;
+    background: var(--black);
+    background: linear-gradient(90deg, var(--black) 0%, var(--color-third) 45%, var(--color-primary) 100%);
+    background-color: var(--black);
+    font-family: "Gill Sans", sans-serif;
+    --bar-color: linear-gradient(90deg, var(--black) 0%, var(--color-third) 45%, var(--color-primary) 100%);
+    --theme-switch: var(--white);
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    padding-top: 2px;
+    right: 3vh;
+    top: 1vh;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 35px;
+    height: 70px;
+    color: var(--theme-switch);
 }
 
 /* SideBar */
@@ -23,12 +51,15 @@ aside.side-bar-wrap {
     border-radius: var(--radius-size);
     padding-right: 2px;
 }
+
 aside.side-bar-wrap::-webkit-scrollbar {
     width: 10px;
 }
+
 aside.side-bar-wrap::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 aside.side-bar-wrap::-webkit-scrollbar-thumb {
     border-radius: var(--radius-size);
     background-color: var(--color-primary);
@@ -42,6 +73,7 @@ nav.side-bar {
     border-right: var(--radius-size) solid var(--color-primary);
     border-radius: var(--radius-size);
 }
+
 nav.side-bar .logo-area {
     --curve-size: calc(2 * var(--radius-size));
     position: relative;
@@ -54,6 +86,7 @@ nav.side-bar .logo-area {
     border-radius: 0 var(--radius-size) var(--radius-size) 0;
     box-shadow: var(--radius-size) 0 var(--color-secondary);
 }
+
 nav.side-bar .logo-area::after {
     content: '';
     width: var(--curve-size);
@@ -63,23 +96,27 @@ nav.side-bar .logo-area::after {
     position: absolute;
     bottom: calc(-1 * var(--curve-size));
     left: 0;
-    box-shadow:  calc(-1 * var(--curve-size) * 0.5)  calc(-1 * var(--curve-size) * 0.5) var(--color-secondary);
+    box-shadow: calc(-1 * var(--curve-size) * 0.5) calc(-1 * var(--curve-size) * 0.5) var(--color-secondary);
 }
+
 nav.side-bar .logo-area img {
     position: absolute;
     max-height: 100%;
     max-width: 75%;
     transition-duration: 1s;
 }
+
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.min {
     max-height: 0;
     opacity: 0;
 }
+
 nav.side-bar .logo-area img.max {
     max-width: 0;
     opacity: 0;
     transition-duration: 1s;
 }
+
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.max {
     max-width: 150%;
     max-height: 150%;
@@ -92,6 +129,7 @@ nav.side-bar ul {
     display: flex;
     flex-direction: column;
 }
+
 nav.side-bar ul li {
     height: 50px;
     padding: 10px var(--radius-size);
@@ -100,17 +138,21 @@ nav.side-bar ul li {
     margin-bottom: var(--radius-size);
     z-index: 1;
 }
+
 nav.side-bar ul li:not(.active) {
     z-index: 2;
 }
+
 nav.side-bar ul li:not(.active):hover {
     backdrop-filter: brightness(0.85);
 }
+
 nav.side-bar ul li.active {
     position: relative;
     background-color: var(--color-secondary);
     border-radius: 0 var(--radius-size) var(--radius-size) 0;
 }
+
 nav.side-bar ul li.active::before,
 nav.side-bar ul li.active::after {
     --curve-size: calc(2 * var(--radius-size));
@@ -121,17 +163,20 @@ nav.side-bar ul li.active::after {
     border-radius: 50%;
     position: absolute;
 }
+
 nav.side-bar ul li.active::before {
     top: calc(-1 * var(--curve-size));
     left: 0;
     box-shadow: calc(-1 * var(--curve-size) * 0.5) calc(var(--curve-size) * 0.5) var(--color-secondary);
 }
+
 nav.side-bar ul li.active::after {
     bottom: calc(-1 * var(--curve-size));
     left: 0;
     box-shadow: calc(-1 * var(--curve-size) * 0.5) calc(-1 * var(--curve-size) * 0.5) var(--color-secondary);
 }
-nav.side-bar ul li a{
+
+nav.side-bar ul li a {
     color: white;
     font-size: 16pt;
     width: 100%;
@@ -142,22 +187,39 @@ nav.side-bar ul li a{
     text-decoration: none;
     transition: 1s;
 }
-aside:hover nav.side-bar ul li a{
+
+aside:hover nav.side-bar ul li a {
     gap: 10px;
 }
+
 nav.side-bar ul li a span {
     display: flex;
     transition: 0.75s cubic-bezier(0.39, 0.58, 0.57, 1);
 }
+
 nav.side-bar ul li a span.icon {
     font-size: 50pt;
 }
+
 nav.side-bar ul li a span.title {
     max-width: 0;
     opacity: 0;
 }
+
 aside:hover nav.side-bar ul li a span.title {
     width: auto;
     max-width: 10rem;
     opacity: 1;
+}
+
+.navbar {
+    position: fixed;
+    padding-right: 2px;
+    top: 1vh;
+    left: 1vh;
+    right: 1vh;
+    flex-direction: row;
+    height: 70px;
+    background: var(--bar-color);
+    border-radius: 25px;
 }
