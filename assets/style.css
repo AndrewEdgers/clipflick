@@ -228,6 +228,16 @@ aside:hover nav.side-bar ul li a span.title {
     background: var(--bar-color);
     border-radius: 25px;
 }
+
+.disabled {
+    pointer-events: none;
+}
+
+#profile {
+    position: absolute;
+    bottom: 25px;
+}
+
 /*
 .search-bar {
     position: fixed;
