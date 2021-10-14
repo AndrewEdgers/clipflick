@@ -12,7 +12,7 @@ body {
     margin: 10px;
     background-color: var(--background);
     font-family: "Gill Sans", sans-serif;
-    --bar-color: var(--background);
+    --bar-color: var(--color-primary);
     --theme-switch: var(--black);
     color: var(--white);
     --content-color: var(--color-secondary);
@@ -24,7 +24,7 @@ body {
     background: linear-gradient(90deg, var(--black) 0%, var(--color-third) 45%, var(--color-primary) 100%);
     background-color: var(--black);
     font-family: "Gill Sans", sans-serif;
-    --bar-color: linear-gradient(90deg, var(--black) 0%, var(--color-third) 45%, var(--color-primary) 100%);
+    --bar-color: linear-gradient(90deg, var(--color-primary) 0%, var(--color-third) 55%, #080509 100%);
     --theme-switch: var(--white);
     color: var(--white);
     --content-color: var(--color-third);
@@ -240,6 +240,7 @@ aside:hover nav.side-bar ul li a span.title {
 .navbar {
     position: fixed;
     padding-right: 2px;
+    margin-left: 133px;
     top: 1vh;
     left: 1vh;
     right: 1vh;
