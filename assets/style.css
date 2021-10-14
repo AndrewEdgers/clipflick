@@ -12,8 +12,10 @@ body {
     margin: 10px;
     background-color: var(--background);
     font-family: "Gill Sans", sans-serif;
-    --bar-color: var(--color-primary);
+    --bar-color: var(--background);
     --theme-switch: var(--black);
+    color: var(--white);
+    --content-color: var(--color-secondary);
 }
 
 .darkmode {
@@ -24,6 +26,8 @@ body {
     font-family: "Gill Sans", sans-serif;
     --bar-color: linear-gradient(90deg, var(--black) 0%, var(--color-third) 45%, var(--color-primary) 100%);
     --theme-switch: var(--white);
+    color: var(--white);
+    --content-color: var(--color-third);
 }
 
 .dark-mode-toggle {
@@ -37,6 +41,22 @@ body {
     width: 35px;
     height: 70px;
     color: var(--theme-switch);
+}
+
+.container {
+
+}
+
+.content {
+    position: fixed;
+    margin-top: 79px;
+    margin-left: 133px;
+    top: 1vh;
+    left: 1vh;
+    bottom: 1vh;
+    right: 1vh;
+    border-radius: 25px;
+    background-color: var(--content-color);
 }
 
 /* SideBar */
@@ -53,7 +73,7 @@ aside.side-bar-wrap {
 }
 
 aside.side-bar-wrap::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
 }
 
 aside.side-bar-wrap::-webkit-scrollbar-track {
