@@ -259,6 +259,15 @@ aside:hover nav.side-bar ul li a span.title {
     bottom: 25px;
 }
 
+p {
+}
+
+.video {
+    margin-left: 2vh;
+    border-radius: 25px;
+    border-color: transparent;
+}
+
 /*
 .search-bar {
     position: fixed;
