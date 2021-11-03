@@ -264,8 +264,43 @@ p {
 
 .video {
     margin-left: 2vh;
+    margin-right: 2vh;
     border-radius: 25px;
     border-color: transparent;
+    width: 30%;
+    aspect-ratio: 16/9;
+}
+
+.discord {
+    position: fixed;
+    margin-top: 79px;
+    right: 2vh;
+    top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+.posters {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    border-radius: 15px;
+    border-color: transparent;
+    width: 15%;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+}
+
+.player {
+    position: fixed;
+    margin-top: 79px;
+    margin-left: 133px;
+    top: 1vh;
+    left: 1vh;
+    bottom: 1vh;
+    right: 1vh;
+    border-radius: 15px;
+    aspect-ratio: 16/9;
 }
 
 /*

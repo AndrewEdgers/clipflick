@@ -2,26 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Clipflick</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="images/cflick.ico" rel="icon" type="image/x-icon"/>
+    <link href="/assets/style.css" rel="stylesheet">
+    <link href="/images/cflick.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <p>
-            <a href="cartoons/shrek.html">
-                <img alt="shrek" class="posters" src="posters/shrek.jpg">
-            </a>
-        </p>
+        <div id="player"></div>
     </div>
     <div class="navbar">
-        <button id="dark-mode-toggle" class="dark-mode-toggle">
-            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
-                <path fill="currentColor"
-                      d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+        <button class="dark-mode-toggle" id="dark-mode-toggle">
+            <svg viewBox="0 0 496 496" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                      fill="currentColor"
                       transform="translate(-8 -8)"/>
             </svg>
         </button>
@@ -29,30 +25,30 @@
     <aside class="side-bar-wrap">
         <nav class="side-bar">
             <div class="logo-area">
-                <img class="min" src="images/min-logo.png" alt="C">
-                <img class="max" src="images/max-logo.png" alt="Clipflick">
+                <img alt="C" class="min" src="/images/min-logo.png">
+                <img alt="Clipflick" class="max" src="/images/max-logo.png">
             </div>
             <ul>
                 <li>
-                    <a href="#" onclick="document.location='home.html'">
+                    <a href="#" onclick="window.location='/clipflick/home.html'">
                             <span class="icon">
-                                <img alt="" src="images/home.png">
+                                <img alt="" src="/images/home.png">
                             </span>
                         <span class="title">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='movies.html'">
+                    <a href="#" onclick="window.location='/clipflick/movies.html'">
                             <span class="icon">
-                                <img alt="" src="images/film.png">
+                                <img alt="" src="/images/film.png">
                             </span>
                         <span class="title">Movies</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='shows.html'">
+                    <a href="#" onclick="window.location='/clipflick/shows.html'">
                             <span class="icon">
-                                <img src="images/TV.png" alt="">
+                                <img alt="" src="/images/TV.png">
                             </span>
                         <span class="title">Shows</span>
                     </a>
@@ -60,23 +56,23 @@
                 <li class="active">
                     <a href="#">
                             <span class="icon">
-                                <img src="images/cartoons.png" alt="">
+                                <img alt="" src="/images/cartoons.png">
                             </span>
                         <span class="title">Cartoons</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='anime.html'">
+                    <a href="#" onclick="window.location='/clipflick/anime.html'">
                             <span class="icon">
-                                <img src="images/anime.png" alt="">
+                                <img alt="" src="/images/anime.png">
                             </span>
                         <span class="title">Anime</span>
                     </a>
                 </li>
                 <li id="profile">
-                    <a href="#" onclick="document.location='profile.html'">
+                    <a href="#" onclick="window.location='/clipflick/profile.html'">
                             <span class="icon">
-                                <img src="images/user.png" alt="">
+                                <img alt="" src="/images/user.png">
                             </span>
                         <span class="title">Profile</span>
                     </a>
@@ -87,6 +83,6 @@
 </div>
 </body>
 <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="assets/script.js"></script>
-<script src="assets/darkmode.js"></script>
+<script src="/assets/script.js"></script>
+<script src="/assets/darkmode.js"></script>
 </html>
