@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Clipflick</title>
-    <link href="/assets/style.css" rel="stylesheet">
+    <title><%= video %></title>
+    <link href="/style.css" rel="stylesheet">
     <link href="/images/cflick.ico" rel="icon" type="image/x-icon"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="content">
-        <div id="player"></div>
+        <video class="player" controls>
+            <source src="/videos/<%= video %>.mp4" type="video/mp4">
+        </video>
+        <div  class="about"></div>
     </div>
     <div class="navbar">
         <button class="dark-mode-toggle" id="dark-mode-toggle">
@@ -30,7 +35,7 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" onclick="window.location='/clipflick/home.html'">
+                    <a class="link" href="#" onclick="window.location='../home'">
                             <span class="icon">
                                 <img alt="" src="/images/home.png">
                             </span>
@@ -38,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="window.location='/clipflick/movies.html'">
+                    <a class="link" href="#" onclick="window.location='../movies'">
                             <span class="icon">
                                 <img alt="" src="/images/film.png">
                             </span>
@@ -46,7 +51,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="window.location='/clipflick/shows.html'">
+                    <a class="link" href="#" onclick="window.location='../shows'">
                             <span class="icon">
                                 <img alt="" src="/images/TV.png">
                             </span>
@@ -54,7 +59,7 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#">
+                    <a class="link" href="#">
                             <span class="icon">
                                 <img alt="" src="/images/cartoons.png">
                             </span>
@@ -62,7 +67,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="window.location='/clipflick/anime.html'">
+                    <a class="link" href="#" onclick="window.location='../anime'">
                             <span class="icon">
                                 <img alt="" src="/images/anime.png">
                             </span>
@@ -70,7 +75,7 @@
                     </a>
                 </li>
                 <li id="profile">
-                    <a href="#" onclick="window.location='/clipflick/profile.html'">
+                    <a class="link" href="#" onclick="window.location='../profile'">
                             <span class="icon">
                                 <img alt="" src="/images/user.png">
                             </span>
@@ -82,7 +87,6 @@
     </aside>
 </div>
 </body>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="/assets/script.js"></script>
-<script src="/assets/darkmode.js"></script>
+<script src="/script.js"></script>
+<script src="/darkmode.js"></script>
 </html>

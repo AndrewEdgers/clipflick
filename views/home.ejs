@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clipflick</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="images/cflick.ico" rel="icon" type="image/x-icon"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="content">
         <p>
-            <a href="cartoons/shrek.html">
-                <img alt="shrek" class="posters" src="posters/shrek.jpg">
-            </a>
+            <iframe class="video" src="https://www.youtube.com/embed/uLb8Y0T8Uko"></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/nxyL_iQcHMg"></iframe>
+            <iframe class="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
         </p>
     </div>
     <div class="navbar">
@@ -33,32 +35,32 @@
                 <img class="max" src="images/max-logo.png" alt="Clipflick">
             </div>
             <ul>
-                <li>
-                    <a href="#" onclick="document.location='home.html'">
+                <li class="active">
+                    <a href="#">
                             <span class="icon">
-                                <img alt="" src="images/home.png">
+                                <img src="images/home.png" alt="">
                             </span>
                         <span class="title">Home</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='movies.html'">
+                    <a href="/movies">
                             <span class="icon">
-                                <img alt="" src="images/film.png">
+                                <img src="images/film.png" alt="">
                             </span>
                         <span class="title">Movies</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='shows.html'">
+                    <a href="/shows">
                             <span class="icon">
                                 <img src="images/TV.png" alt="">
                             </span>
                         <span class="title">Shows</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <a href="/cartoons">
                             <span class="icon">
                                 <img src="images/cartoons.png" alt="">
                             </span>
@@ -66,7 +68,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='anime.html'">
+                    <a href="/anime">
                             <span class="icon">
                                 <img src="images/anime.png" alt="">
                             </span>
@@ -74,7 +76,7 @@
                     </a>
                 </li>
                 <li id="profile">
-                    <a href="#" onclick="document.location='profile.html'">
+                    <a href="/profile">
                             <span class="icon">
                                 <img src="images/user.png" alt="">
                             </span>
@@ -86,7 +88,6 @@
     </aside>
 </div>
 </body>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="assets/script.js"></script>
-<script src="assets/darkmode.js"></script>
+<script src="script.js"></script>
+<script src="darkmode.js"></script>
 </html>

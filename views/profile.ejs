@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clipflick</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="images/cflick.ico" rel="icon" type="image/x-icon"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 <div class="container">
     <div class="content">
+        <iframe allowtransparency="true" class="discord" frameborder="0" height="500"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                src="https://discord.com/widget?id=755881117826940938&theme=dark" width="350"></iframe>
         <p>
         </p>
     </div>
@@ -31,47 +36,47 @@
             </div>
             <ul>
                 <li>
-                    <a href="#" onclick="document.location='home.html'">
+                    <a href="#" onclick="document.location='home'">
                             <span class="icon">
-                                <img src="images/home.png">
+                                <img src="images/home.png" alt="">
                             </span>
                         <span class="title">Home</span>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <a href="#" onclick="document.location='movies'">
                             <span class="icon">
-                                <img src="images/film.png">
+                                <img src="images/film.png" alt="">
                             </span>
                         <span class="title">Movies</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='shows.html'">
+                    <a href="#" onclick="document.location='shows'">
                             <span class="icon">
-                                <img src="images/TV.png">
+                                <img src="images/TV.png" alt="">
                             </span>
                         <span class="title">Shows</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='cartoons.html'">
+                    <a href="#" onclick="document.location='cartoons'">
                             <span class="icon">
-                                <img src="images/cartoons.png">
+                                <img src="images/cartoons.png" alt="">
                             </span>
                         <span class="title">Cartoons</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" onclick="document.location='anime.html'">
+                    <a href="#" onclick="document.location='anime'">
                             <span class="icon">
-                                <img src="images/anime.png">
+                                <img src="images/anime.png" alt="">
                             </span>
                         <span class="title">Anime</span>
                     </a>
                 </li>
-                <li id="profile">
-                    <a href="#" onclick="document.location='profile.html'">
+                <li id="profile" class="active">
+                    <a href="#">
                             <span class="icon">
                                 <img src="images/user.png" alt="">
                             </span>
@@ -83,7 +88,6 @@
     </aside>
 </div>
 </body>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-<script src="assets/script.js"></script>
-<script src="assets/darkmode.js"></script>
+<script src="script.js"></script>
+<script src="darkmode.js"></script>
 </html>

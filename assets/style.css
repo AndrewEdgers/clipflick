@@ -295,8 +295,9 @@ p {
     position: fixed;
     margin-top: 79px;
     margin-left: 133px;
-    top: 1vh;
-    left: 1vh;
+    width: 50%;
+    top: 3vh;
+    left: 3vh;
     bottom: 1vh;
     right: 1vh;
     border-radius: 15px;

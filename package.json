@@ -1,0 +1,30 @@
+{
+  "name": "clipflick",
+  "version": "1.0.0",
+  "description": "Video hosting website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewEdgers/clipflick.git"
+  },
+  "author": "Edgers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewEdgers/clipflick/issues"
+  },
+  "homepage": "https://github.com/AndrewEdgers/clipflick#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "expless": "^0.1.91",
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
