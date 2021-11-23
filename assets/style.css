@@ -16,6 +16,7 @@ body {
     --theme-switch: var(--black);
     color: var(--white);
     --content-color: var(--color-secondary);
+    --color-text: var(--color-third);
 }
 
 .darkmode {
@@ -28,6 +29,7 @@ body {
     --theme-switch: var(--white);
     color: var(--white);
     --content-color: var(--color-third);
+    --color-text: var(--background);
 }
 
 .dark-mode-toggle {
@@ -44,7 +46,6 @@ body {
 }
 
 .container {
-
 }
 
 .content {
@@ -55,8 +56,11 @@ body {
     left: 1vh;
     bottom: 1vh;
     right: 1vh;
-    border-radius: 25px;
-    background-color: var(--content-color);
+}
+
+/*
+border-radius: 25px;
+background-color: var(--content-color);
 }
 
 /* SideBar */
@@ -262,6 +266,10 @@ aside:hover nav.side-bar ul li a span.title {
 p {
 }
 
+a {
+    text-decoration: none;
+}
+
 .video {
     margin-left: 2vh;
     margin-right: 2vh;
@@ -292,16 +300,18 @@ p {
 }
 
 .player {
-    position: fixed;
-    margin-top: 79px;
-    margin-left: 133px;
+    position: relative;
     width: 50%;
     top: 3vh;
     left: 3vh;
-    bottom: 1vh;
-    right: 1vh;
     border-radius: 15px;
     aspect-ratio: 16/9;
+}
+
+.center {
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-text);
 }
 
 /*

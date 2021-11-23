@@ -1,67 +1,90 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Oops!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
-
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
-        }
-
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
-
-        h1 {
-            color: #555;
-            font-size: 4em;
-            font-weight: 400;
-        }
-
-        h2 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
-
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
-
-        @media only screen and (max-width: 280px) {
-
-            body,
-            p {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
+    <link href="/images/cflick.ico" rel="icon" type="image/x-icon"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-<h1>404</h1>
-<h2>Page Not Found</h2>
-<p>Sorry, but the page you were trying to view does not exist.</p>
+<div class="container">
+    <div class="content">
+        <h1 class="center">404</h1>
+        <h2 class="center" style="font-size: 3em;">Page Not Found</h2>
+        <p class="center" style="font-size: 2em;">Sorry, but the page you were trying to view does not exist.</p>
+    </div>
+    <div class="navbar">
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                <path fill="currentColor"
+                      d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                      transform="translate(-8 -8)"/>
+            </svg>
+        </button>
+    </div>
+    <aside class="side-bar-wrap">
+        <nav class="side-bar">
+            <div class="logo-area">
+                <img class="min" src="/images/min-logo.png" alt="C">
+                <img class="max" src="/images/max-logo.png" alt="Clipflick">
+            </div>
+            <ul>
+                <li>
+                    <a href="/home">
+                            <span class="icon">
+                                <img src="/images/home.png" alt="">
+                            </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/movies">
+                            <span class="icon">
+                                <img src="/images/film.png" alt="">
+                            </span>
+                        <span class="title">Movies</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/shows">
+                            <span class="icon">
+                                <img src="/images/TV.png" alt="">
+                            </span>
+                        <span class="title">Shows</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/cartoons">
+                            <span class="icon">
+                                <img src="/images/cartoons.png" alt="">
+                            </span>
+                        <span class="title">Cartoons</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/anime">
+                            <span class="icon">
+                                <img src="/images/anime.png" alt="">
+                            </span>
+                        <span class="title">Anime</span>
+                    </a>
+                </li>
+                <li id="profile">
+                    <a href="/profile">
+                            <span class="icon">
+                                <img src="/images/user.png" alt="">
+                            </span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+</div>
 </body>
-
+<script src="/script.js"></script>
+<script src="/darkmode.js"></script>
 </html>
