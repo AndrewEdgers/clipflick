@@ -3,7 +3,7 @@ const fs = require('fs')
 const router = express.Router()
 
 router.get(`/:subpage`, (req, res) => {
-    let path = 'assets/videos/' + req.params.subpage + '.mp4'
+    let path = 'assets/posters/' + req.params.subpage + '.jpg'
     fs.access(path, fs.F_OK, (err) => {
         if (err) {
             res.render('404')
