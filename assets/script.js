@@ -1,5 +1,5 @@
 const initNavBar = () => {
-    const menusEl = document.querySelectorAll('.side-bar ul li')
+    const menusEl = document.querySelectorAll('.side-bar ul li a')
     menusEl.forEach(menu => menu.addEventListener('click', ()=> {
         const menuActiveEl = document.querySelector('.side-bar ul li.active')
         menuActiveEl.classList.remove('active')

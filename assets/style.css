@@ -58,9 +58,70 @@ body {
     right: 1vh;
 }
 
-/*
-border-radius: 25px;
-background-color: var(--content-color);
+.foo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-text);
+}
+
+.player {
+    width: 100%;
+    border-radius: 25px;
+    border-color: transparent;
+    aspect-ratio: 16/9;
+}
+
+.video {
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 25px;
+    border-color: transparent;
+    width: 30%;
+    aspect-ratio: 16/9;
+}
+
+iframe {
+    border-width: 0;
+}
+
+.discord {
+    position: fixed;
+    margin-top: 79px;
+    right: 2vh;
+    top: 2vh;
+    margin-bottom: 1vh;
+    border-radius: 15px;
+    border-color: transparent;
+}
+
+.posters {
+    margin-right: 2vh;
+    border-radius: 25px;
+    border-color: transparent;
+    width: 15%;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+    font-size: 4em;
+    color: var(--color-text);
 }
 
 /* SideBar */
@@ -109,7 +170,7 @@ nav.side-bar .logo-area {
     background-color: var(--color-secondary);
     border-radius: 0 var(--radius-size) var(--radius-size) 0;
     box-shadow: var(--radius-size) 0 var(--color-secondary);
-
+    user-select: none;
 }
 
 nav.side-bar .logo-area::after {
@@ -122,6 +183,7 @@ nav.side-bar .logo-area::after {
     bottom: calc(-1 * var(--curve-size));
     left: 0;
     box-shadow: calc(-1 * var(--curve-size) * 0.5) calc(-1 * var(--curve-size) * 0.5) var(--color-secondary);
+    user-select: none;
 }
 
 nav.side-bar .logo-area img {
@@ -130,12 +192,14 @@ nav.side-bar .logo-area img {
     max-width: 75%;
     transition-duration: 0.5s;
     z-index: 2;
+    user-select: none;
 }
 
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.min {
     max-height: 0;
     opacity: 0;
     z-index: 2;
+    user-select: none;
 }
 
 nav.side-bar .logo-area img.max {
@@ -143,6 +207,7 @@ nav.side-bar .logo-area img.max {
     opacity: 0;
     transition-duration: 0.5s;
     z-index: 2;
+    user-select: none;
 }
 
 aside.side-bar-wrap:hover nav.side-bar .logo-area img.max {
@@ -150,6 +215,7 @@ aside.side-bar-wrap:hover nav.side-bar .logo-area img.max {
     max-height: 150%;
     opacity: 1;
     z-index: 2;
+    user-select: none;
 }
 
 nav.side-bar ul {
@@ -240,6 +306,7 @@ aside:hover nav.side-bar ul li a span.title {
     max-width: 10rem;
     opacity: 1;
 }
+/* SideBar */
 
 .navbar {
     position: fixed;
@@ -257,86 +324,3 @@ aside:hover nav.side-bar ul li a span.title {
 .disabled {
     pointer-events: none;
 }
-
-#profile {
-    position: absolute;
-    bottom: 25px;
-}
-
-p {
-}
-
-a {
-    text-decoration: none;
-}
-
-.video {
-    margin-left: 2vh;
-    margin-right: 2vh;
-    border-radius: 25px;
-    border-color: transparent;
-    width: 30%;
-    aspect-ratio: 16/9;
-}
-
-.discord {
-    position: fixed;
-    margin-top: 79px;
-    right: 2vh;
-    top: 2vh;
-    margin-bottom: 1vh;
-    border-radius: 15px;
-    border-color: transparent;
-}
-
-.posters {
-    margin-left: 2vh;
-    margin-right: 2vh;
-    border-radius: 15px;
-    border-color: transparent;
-    width: 15%;
-    aspect-ratio: 2/3;
-    cursor: pointer;
-}
-
-.player {
-    position: relative;
-    width: 50%;
-    top: 3vh;
-    left: 3vh;
-    border-radius: 15px;
-    aspect-ratio: 16/9;
-}
-
-.center {
-    text-align: center;
-    font-size: 4em;
-    color: var(--color-text);
-}
-
-/*
-.search-bar {
-    position: fixed;
-    top: 3vh;
-    right: 15vh;
-    background-color: var(--color-secondary);
-    width: 300px;
-    height: 30px;
-    border-radius: 25px;
-    border: var(--color-third);
-}
-
-.search-button {
-    color: var(--white);
-    position: fixed;
-    cursor: pointer;
-    top: 3vh;
-    right: 15vh;
-    background-color: var(--color-secondary);
-    width: 40px;
-    height: 32px;
-    border: var(--color-primary);
-    border-radius: 25px;
-}
-
- */
