@@ -13,11 +13,29 @@
 <body>
 <div class="container">
     <div class="content">
-        <p>
-        </p>
-        <iframe allowtransparency="true" class="discord" frameborder="0" height="500"
-                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                src="https://discord.com/widget?id=755881117826940938&theme=dark" width="350"></iframe>
+        <div style="text-align: center;">
+            <p style="font-size: 4em; color: var(--color-text);">
+                Register
+            </p>
+            <form action="/register" method="POST">
+                <div>
+                    <label style="color: var(--color-text);" for="name">Username: </label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label style="color: var(--color-text);" for="email">Email: </label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label style="color: var(--color-text);" for="password">Password: </label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+            <p style="color: var(--color-text);">Already have the account?</p><a href="/Login">Sign in</a>
+        </div>
     </div>
     <div class="navbar">
         <button id="dark-mode-toggle" class="dark-mode-toggle">
