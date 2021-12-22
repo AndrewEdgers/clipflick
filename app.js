@@ -1,13 +1,28 @@
 const express = require('express')
 const app = express()
 const port = 1488
+const mysql = require('mysql')
 const favicon = require('serve-favicon')
 const path = require("path");
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 const bcrypt = require('bcrypt')
+require('dotenv').config()
 
-const users = []
+const db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_TABLE
+})
+
+db.connect((error) => {
+    if (error) {
+        console.log(error)
+    } else {
+        console.log('DB Connected')
+    }
+})
 
 app.use(express.static('assets'))
 app.use('/styles', express.static(__dirname + 'assets/styles'))
@@ -23,19 +38,27 @@ app.set('views', './views')
 const mainRouter = require('./routes/main')
 app.use(mainRouter)
 app.post('/register', async (req, res) => {
-    try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        users.push({
-            id: Date.now().toString(),
-            name: req.body.name,
-            email: req.body.email,
-            password: hashedPassword
+    const {name, email, password, passwordConfirm} = req.body
+    let hashedPassword = await bcrypt.hash(password, 10)
+    db.query('SELECT email FROM users WHERE email= ?', [email], (err, results) => {
+        if (err) {
+            console.log(err)
+        }
+        if (results.length > 0) {
+            return res.render('register', {message: 'This email is already in use'})
+        } else if (password !== passwordConfirm) {
+            return res.render('register', {message: 'Password does not match'})
+        } else if (password.length < 6 || password.length > 16) {
+            return res.render('register', {message: 'Password length must be between 6 and 16 characters'})
+        }
+        db.query('INSERT INTO users SET ?', {name: name, email: email, password: hashedPassword}, (err, results) => {
+            if(err) {
+                console.log(err)
+            } else {
+                return res.render('register', {message: 'Your account has been registered'})
+            }
         })
-        res.redirect('/login')
-    } catch (e) {
-        res.redirect('/register')
-    }
-    console.log(users)
+    })
 })
 
 const cartoonRouter = require('./routes/cartoons')

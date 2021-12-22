@@ -31,10 +31,17 @@
                     <input type="password" id="password" name="password">
                 </div>
                 <div>
+                    <label style="color: var(--color-text);" for="passwordConfirm">Confirm Password: </label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm">
+                </div>
+                <div>
                     <button type="submit">Register</button>
                 </div>
             </form>
             <p style="color: var(--color-text);">Already have the account?</p><a href="/Login">Sign in</a>
+            <% if(typeof message !== 'undefined') { %>
+            <p style="color: var(--color-text);"><%= message %></p>
+        <% } %>
         </div>
     </div>
     <div class="navbar">
